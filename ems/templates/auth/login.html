@@ -1,0 +1,55 @@
+{% load static %}
+<!-- <html>
+    <head>
+        <title>Employee Management System</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    </head>
+    <body>
+<br/>
+<center>
+	<form method="POST">
+		{% csrf_token %}
+		<table>
+			<tr>
+				<td><label for="username">User Name</label></td>
+				<td><input type="text" name="username" id="username" required></td>
+			</tr>
+			<tr>
+				<td><label for="password">Password</label></td>
+				<td><input type="password" name="password" id="password" required></td>
+			</tr>
+			<p style="color:red;">{{error}}</p>
+		</table>
+		<button class="btn btn-success" type="submit">Login</button>
+	 </form>
+  </center>
+ </body>
+</html> -->
+
+<html>
+<head>
+        <title>Employee Management System</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    </head>
+<body>
+<center>
+  <div class="wrapper">
+    <form method="POST" class="form-signin">   
+       {% csrf_token %}    
+      <br/>
+      <h2 class="form-signin-heading">Please login</h2>
+      <input type="text"  name="username" placeholder="username" id="username" required="" autofocus="" /><br/>
+      <input type="password"  name="password" id="password" placeholder="Password" required=""/><br/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+      </label><br/>
+      <button class="btn btn-primary" type="submit">Login</button>   
+    </form>
+  </div>
+  </center>
+  </body>
+  </html>
